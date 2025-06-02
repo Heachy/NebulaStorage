@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cy.ns</groupId>
+    <artifactId>NebulaStorage</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+    <name>Nebula Storage</name>
+    <description>Nebula Storage</description>
+    <url>https://github.com/Heachy/NebulaStorage</url>
+    <modules>
+        <module>ns-common</module>
+        <module>ns-dependencies</module>
+        <module>ns-reed-solomon</module>
+        <module>ns-raft</module>
+        <module>ns-web</module>
+        <module>ns-generate</module>
+        <module>ns-rabbitmq</module>
+    </modules>
+
+    <properties>
+        <revision>1.0.0</revision>
+        <springboot.version>3.2.7</springboot.version>
+        <spring-cloud.version>2022.0.4</spring-cloud.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.parameters>true</maven.compiler.parameters>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.cy.ns</groupId>
+                <artifactId>ns-dependencies</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.cy.ns</groupId>
+                <artifactId>ns-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cy.ns</groupId>
+                <artifactId>ns-reed-solomon</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cy.ns</groupId>
+                <artifactId>ns-raft</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.cy.ns</groupId>
+                <artifactId>ns-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.cy.ns</groupId>
+                <artifactId>ns-gateway</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.cy.ns</groupId>
+                <artifactId>ns-generate</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.cy.ns</groupId>
+                <artifactId>ns-rabbitmq</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
+
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

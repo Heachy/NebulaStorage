@@ -1,0 +1,27 @@
+server:
+    port: 8074
+raft:
+    server:
+        ip: localhost
+        port: 8084
+    id: 4
+    path: E:\java\graduation\storage\node4
+    electionTimeoutMin: 1000
+    electionTimeoutMax: 10000
+    replicateInterval: 50
+    raftClientNodes:
+        - id: 1
+          ip: localhost
+          port: 8081
+        - id: 2
+          ip: localhost
+          port: 8082
+        - id: 3
+          ip: localhost
+          port: 8083
+        - id: 5
+          ip: localhost
+          port: 8085
+spring:
+    main:
+        allow-circular-references: true

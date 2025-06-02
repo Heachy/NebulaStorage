@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cy.ns.generate.mapper.NsConfigMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.cy.ns.generate.domain.NSConfig">
+        <id column="id" property="id" />
+        <id column="user_id" property="userId" />
+        <result column="max_bucket_count" property="maxBucketCount" />
+        <result column="default_bucket_memory" property="defaultBucketMemory" />
+        <result column="default_bucket_authority" property="defaultBucketAuthority" />
+        <result column="default_file_authority" property="defaultFileAuthority" />
+        <result column="default_file_save" property="defaultFileSave" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,user_id, max_bucket_count, default_bucket_authority, default_bucket_memory, default_file_authority,default_file_save
+    </sql>
+
+</mapper>

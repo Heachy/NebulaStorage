@@ -1,0 +1,16 @@
+server:
+    port: 8076
+sa-token:
+    token-name: token
+    timeout: 259200
+    is-concurrent: false
+    is-share: true
+    token-style: random-32
+    is-log: false
+
+spring:
+    servlet:
+        multipart:
+            max-file-size: 500MB
+            max-request-size: 500MB
+
